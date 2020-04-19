@@ -1,0 +1,21 @@
+#Shared namespace, just in case
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: shared
+  labels:
+    name: shared
+
+
+
+# service template 
+# creates fake dns minikube-host to actual host ip 
+apiVersion: v1
+kind: Service
+metadata:
+  name: masterhost
+  namespace: shared
+spec:
+    type: ExternalName
+    # externalName should be dns name, not ip, so as a workaroung we use http://xip.io 
+    externalName: {IP}.xip.io
