@@ -16,6 +16,7 @@ It will download *kubefwd* and other tools and add this folder to PATH :boom:
 Checks if minikube is stale\stopped or misconfigured and starts it with following addons:
 
 - Deploys service **masterhost.shared** and setups forwarding to host ip 
+
 Not 127.0.0.1 but your VM host machine IP that changes on restart. This way services inside the cluster can access resources running on your machine, like sql server, just use masterhost.shared as an endpoint name and make sure port in firewall is open to internal network (1433 for sql)
 
 - Adds dns names to localhost:
