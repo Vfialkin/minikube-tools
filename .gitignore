@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/masterhost.template.yaml
+/LICENSE
+/*.exe
+/*.dll
+/.vs/*
+/.vs
