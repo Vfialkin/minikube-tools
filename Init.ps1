@@ -12,8 +12,8 @@ Function Add-ToSystemPath {
        Write-Host "'$Path' already exists in Path statement" }
    else {     
        $VerifiedPathsToAdd += ";$Path"
-       Write-Host "Adding '$Path' to Path statement now..."
-       [Environment]::SetEnvironmentVariable("Path",$env:Path + $VerifiedPathsToAdd,"Process")
+       Write-Host "Adding '$Path' to Path statement now..."       
+       [Environment]::SetEnvironmentVariable("Path", $env:Path + $VerifiedPathsToAdd, [System.EnvironmentVariableTarget]::Machine)
        }
    }
 
