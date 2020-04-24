@@ -25,15 +25,28 @@ Not 127.0.0.1 but your VM host machine IP that changes on restart. This way serv
     3. Anything else you need, just checkout the file ;)
 
 
-##### Restart minikube: 
-```powershell
-.\M-Restart.ps1
-```
-Forces restart even if kube is running
+##### Other Scripts (add your own!)
 
-##### Clean k8s logs:
-If you are running out of space 
 ```powershell
-.\M-CleanLogs.ps1
+M-Restart.ps1 #forces restart even if minikube is running
+```
+
+```powershell
+Use-Minikube.ps1 #Switch context to minikube
+```
+
+```powershell
+Use-Dev.ps1 #Switch context to dev
+```
+
+```powershell
+M-Deploy-This.ps1 #Shortcut for 'Invoke-Build Build-DockerImage, Install-Release'. (will switch to minukube context)
+```
+```powershell
+M-Publish-Masterhost #redeploy masterhost without minikube restart (part of M-Start)
+```
+
+```powershell
+M-CleanLogs.ps1 #Clean k8s logs
 ```
 
